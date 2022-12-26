@@ -11,6 +11,7 @@
 		5E077BD8295986BE00252013 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E077BD7295986BE00252013 /* ContentView.swift */; };
 		5E077BDA295986BF00252013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E077BD9295986BF00252013 /* Assets.xcassets */; };
 		5E077BDD295986BF00252013 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E077BDC295986BF00252013 /* Preview Assets.xcassets */; };
+		5E077BE4295989DD00252013 /* NumberOnlyViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E077BE3295989DD00252013 /* NumberOnlyViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		5E077BD7295986BE00252013 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5E077BD9295986BF00252013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E077BDC295986BF00252013 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5E077BE3295989DD00252013 /* NumberOnlyViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOnlyViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				5E077BD7295986BE00252013 /* ContentView.swift */,
 				5E077BD9295986BF00252013 /* Assets.xcassets */,
 				5E077BDB295986BF00252013 /* Preview Content */,
+				5E077BE3295989DD00252013 /* NumberOnlyViewModifier.swift */,
 			);
 			path = NumetricTextField;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E077BE4295989DD00252013 /* NumberOnlyViewModifier.swift in Sources */,
 				5E077BD8295986BE00252013 /* ContentView.swift in Sources */,
 				5E077BD6295986BE00252013 /* NumetricTextFieldApp.swift in Sources */,
 			);

@@ -19,10 +19,12 @@ struct ContentView: View {
             VStack {
                 TextField("Enter Integer Number", text: $isNumericString)
                     .focused($focusedField, equals: .int)
-                    .keyboardType(.numberPad)
+                    //.keyboardType(.numberPad)
+                    .numbersOnly($isNumericString)
                 TextField("Enter Decimal Number", text: $decNumberString)
                     .focused($focusedField, equals: .dec)
-                    .keyboardType(.decimalPad)
+                    //.keyboardType(.decimalPad)
+                    .numbersOnly($decNumberString, includeDecimal: true)
                 Spacer()
             }
             .navigationTitle("Numbers Only")
@@ -39,6 +41,9 @@ struct ContentView: View {
                         Image(systemName: "keyboard.chevron.compact.down")
                     }
                 }
+            }
+            .onAppear {
+                UITextField.appearance().clearButtonMode = .whileEditing
             }
         }
     }
