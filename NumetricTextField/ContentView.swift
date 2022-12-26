@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isNumericString = ""
+    @State private var decNumberString = ""
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+                TextField("Enter Integer Number", text: $isNumericString)
+                TextField("Enter Decimal Number", text: $decNumberString)
+                Spacer()
+            }
+            .navigationTitle("Numbers Only")
+            .textFieldStyle(.roundedBorder)
+            .frame(width: 200)
         }
-        .padding()
     }
 }
 
