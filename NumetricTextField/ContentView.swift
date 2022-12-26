@@ -8,18 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
+    enum FocusedField {
+        case int, dec
+    }
     @State private var isNumericString = ""
     @State private var decNumberString = ""
+    @FocusState private var focusedField: FocusedField?
     var body: some View {
         NavigationStack {
             VStack {
                 TextField("Enter Integer Number", text: $isNumericString)
+                    .focused($focusedField, equals: .int)
+                    .keyboardType(.numberPad)
                 TextField("Enter Decimal Number", text: $decNumberString)
+                    .focused($focusedField, equals: .dec)
+                    .keyboardType(.decimalPad)
                 Spacer()
             }
             .navigationTitle("Numbers Only")
             .textFieldStyle(.roundedBorder)
             .frame(width: 200)
+            .toolbar {
+                ToolbarItem(placement: .keyboard) {
+                    Spacer()
+                }
+                ToolbarItem(placement: .keyboard) {
+                    Button {
+                        focusedField = nil
+                    } label: {
+                        Image(systemName: "keyboard.chevron.compact.down")
+                    }
+                }
+            }
         }
     }
 }
